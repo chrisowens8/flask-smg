@@ -1,0 +1,43 @@
+<!doctype html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SMG</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+
+<link href="{{url_for('static', filename='css/mdb.min.css')}}" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+
+<body>
+
+{% block body %}{% endblock %}
+
+  <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js')}}"></script>
+
+  <script type="text/javascript" src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+
+  <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+  <script type="text/javascript" src="{{url_for('static', filename='js/mdb.min.js')}}"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('.mdb-select').material_select();
+    });
+  </script>
+  <script>
+    // Tooltips Initialization
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</body>
+<footer>
+
+</footer>

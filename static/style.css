@@ -1,0 +1,57 @@
+html, body{
+  background: linear-gradient(#000046, #1CB5E0);
+  background-size: cover;
+  background-repeat:no-repeat;
+  height:100vh;
+  min-height:800px;
+  font-family: 'Roboto', sans-serif;
+  font-weight:200;
+}
+
+.dropdown-content{
+  background-color:rgba(0, 0, 0, 0.7) !important;
+}
+.dropdown-content li>a,
+.dropdown-content li>span {
+font-size: .9rem;
+font-weight:500;
+color: #fff !important;
+}
+.dropdown-content li>a:hover,
+.dropdown-content li>span:hover{
+  color:#135389 !important;
+}
+
+p{
+  font-size:.9em;
+  margin-bottom:35px;
+}
+.container{
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  position:relative;
+  top:100px;
+}
+
+h1{
+  font-size: 3.5em;
+  margin-bottom:20px;
+  color:#fff;
+  font-family: 'Audiowide', arial, cursive !important;
+}
+
+label, optgroup{
+  font-weight:400;
+}
+.caret, input[value], input::placeholder, input.file-path{
+  color:#fff !important;
+}
+
+@media screen and (min-width: 700px) {
+  h1{
+    font-size:5em;
+  }
+  p{
+    font-size:1.1em;
+  }
+}

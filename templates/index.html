@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container white-text">
+  <div class="row">
+    <div class="col-sm-12 col-md-6 offset-md-3">
+      <div id="inner" class="text-center">
+
+        <h1>SMG</h1>
+
+        {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }} {% endif %}
+
+          <p>Upload a .txt file listing your site's URLs, one per line. <br />Lines that don't begin with "http" or "https" are skipped.</p>
+
+          <form method="post" enctype=multipart/form-data>
+
+            <div class="md-form">
+              <div class="file-field">
+                <div class="btn btn-sm btn-outline-light float-right">
+
+                  <span>Choose file</span>
+                  <input type="file" name="file" required>
+
+                </div>
+                <div class="file-path-wrapper">
+
+                  <input class="file-path validate" type="text" placeholder="Upload a .txt file">
+
+                </div>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="md-form">
+
+                  <select class="mdb-select" name="changeFreq" required>
+                    <option value="always">Always</option>
+                    <option value="hourly">Hourly</option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly" selected>Monthly</option>
+                    <option value="yearly">Yearly</option>
+                    <option value="never">Never</option>
+                  </select>
+
+                  <label class="white-text">Changefreq <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="How frequently the page is likely to change."></i></label>
+
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="md-form">
+
+                  <select class="mdb-select" name="priority" required>
+                    <option value="0.0">0.0</option>
+                    <option value="0.1">0.1</option>
+                    <option value="0.2">0.2</option>
+                    <option value="0.3">0.3</option>
+                    <option value="0.4">0.4</option>
+                    <option value="0.5" selected>0.5</option>
+                    <option value="0.6">0.6</option>
+                    <option value="0.7">0.7</option>
+                    <option value="0.8">0.8</option>
+                    <option value="0.9">0.9</option>
+                    <option value="1.0">1.0</option>
+                  </select>
+
+                  <label class="white-text">Priority <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="The priority of this URL relative to other URLs on your site."></i></label>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-outline-light mt-4 pl-5 pr-5" type="submit"><i class="fa fa-download" aria-hidden="true"></i> Download Sitemap</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+{% endblock %}
